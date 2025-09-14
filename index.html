@@ -4,14 +4,67 @@
   <meta charset="UTF-8">
   <title>김명한의 가오</title>
   <style>
+    @font-face {
+      font-family: 'Gulim';
+      src: url('Gulim.ttf') format('truetype');
+    }
+    body {
+      animation: flashing-bg 0.2s infinite;
+      overflow: hidden;
+    }
     .김명한병신 {
       font-size: 200px;
-      color: black;
+      color: yellow;
+      text-shadow: 3px 3px 0px red;
+      font-family: 'Gulim', cursive, sans-serif;
+    }
+    img {
+      position: absolute;
+      width: 250px;
+    }
+
+    img:nth-of-type(1) {
+      animation: move1 5s infinite alternate;
+    }
+
+    img:nth-of-type(2) {
+      animation: move2 6s infinite alternate;
+    }
+
+    @keyframes flashing-bg {
+      0% { background-color: #FF0000; }
+      10% { background-color: #FF7F00; }
+      20% { background-color: #FFFF00; }
+      30% { background-color: #00FF00; }
+      40% { background-color: #0000FF; }
+      50% { background-color: #4B0082; }
+      60% { background-color: #9400D3; } 
+      70% { background-color: #FF00FF; } 
+      80% { background-color: #00FFFF; } 
+      90% { background-color: #FFFFFF; }
+      100% { background-color: #000000; }
+    }
+
+    @keyframes move1 {
+      0% { top: 10%; left: 10%; transform: rotate(0deg); }
+      100% { top: 15%; left: 40%; transform: rotate(360deg); }
+    }
+
+    @keyframes move2 {
+      0% { top: 60%; left: 50%; transform: rotate(0deg); }
+      100% { top: 50%; left: 10%; transform: rotate(-360deg); }
     }
   </style>
 </head>
 <body>
-  <p class="김명한병신">왜 들어옴?</p>
-<img src="https://i.imgur.com/3lxBrrI.jpeg" alt="김명한" width="1000"><img src="https://i.imgur.com/YmgF9A4_d.webp?maxwidth=760&fidelity=grand" alt="명한련" width="1000"
+  <div style="height: 100%; position: relative;">
+    <marquee behavior="alternate" direction="up" scrollamount="20" style="height: 100%;">
+      <marquee direction="right" scrollamount="30">
+        <p class="김명한병신">왜 들어옴?</p>
+      </marquee>
+    </marquee>
+  </div>
+  <img src="3lxBrrI.jpeg" alt="김명한" width="250">
+  <img src="YmgF9A4_d.webp" alt="명한련" width="250">
 </body>
 </html>
