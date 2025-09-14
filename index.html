@@ -31,6 +31,20 @@
       animation: move2 6s infinite alternate;
     }
     
+       @keyframes flashing-bg {
+      0% { background-color: #FF0000; }
+      10% { background-color: #FF7F00; }
+      20% { background-color: #FFFF00; }
+      30% { background-color: #00FF00; }
+      40% { background-color: #0000FF; }
+      50% { background-color: #4B0082; }
+      60% { background-color: #9400D3; } 
+      70% { background-color: #FF00FF; } 
+      80% { background-color: #00FFFF; } 
+      90% { background-color: #FFFFFF; }
+      100% { background-color: #000000; }
+    }
+    
     @keyframes move1 {
       0% { top: 10%; left: 10%; transform: rotate(0deg); }
       100% { top: 15%; left: 40%; transform: rotate(360deg); }
